@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: dados_tratados
+    description: "Tabela tratada com conversões booleanas"
+    columns:
+      - name: id_paciente
+        tests:
+          - not_null
+          - unique
+      - name: obito
+        tests:
+          - accepted_values:
+              values: [TRUE, FALSE]
